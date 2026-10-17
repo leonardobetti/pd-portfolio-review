@@ -10,6 +10,26 @@ Based on UXfolio's [State of UX Portfolios 2026](https://uxfol.io/state-of-ux-po
 
 ## Install
 
+### With npx (easiest)
+
+Needs Node.js 22 or later. Uses the [skills](https://www.npmjs.com/package/skills) CLI from [skills.sh](https://skills.sh).
+
+```sh
+npx skills add leonardobetti/portfolio-review
+```
+
+It asks which agents to install to. To skip the questions:
+
+```sh
+# This project, Claude Code only
+npx skills add leonardobetti/portfolio-review -a claude-code -y
+
+# All projects (user level), Cursor and Codex
+npx skills add leonardobetti/portfolio-review -g -a cursor -a codex -y
+```
+
+### Manual
+
 Each tool looks for a folder named `portfolio-review` with `SKILL.md` inside.
 
 Claude Code
