@@ -86,7 +86,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="ml-auto shrink-0 text-small"
             >
-              MIT License
+              MIT Licence
             </a>
           </nav>
         </div>

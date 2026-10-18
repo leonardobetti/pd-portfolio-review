@@ -31,7 +31,7 @@ const STEPS = [
     title: "Turn on code execution in Claude.ai",
     body: (
       <>
-        Go to Settings → Capabilities and enable{" "}
+        Go to Settings &gt; Capabilities and enable{" "}
         <strong className="font-medium text-foreground">
           Code execution and file creation
         </strong>
@@ -45,9 +45,9 @@ const STEPS = [
       <>
         Open{" "}
         <a href={CLAUDE_SKILLS_URL} target="_blank" rel="noopener noreferrer">
-          Customize → Skills
+          Customize &gt; Skills
         </a>
-        , click +, then Create skill → Upload a skill. Choose your ZIP file.
+        , click +, then Create skill and Upload a skill. Choose your ZIP file.
         Toggle{" "}
         <strong className="font-medium text-foreground">
           pd-portfolio-review
@@ -65,7 +65,7 @@ const STEPS = [
           &ldquo;Review this portfolio: https://yoursite.com&rdquo;
         </em>
         , adding a target role if you have one. Claude should pick up the skill
-        and walk the site like a hiring reviewer.
+        and review the site like a hiring reviewer.
       </>
     ),
   },

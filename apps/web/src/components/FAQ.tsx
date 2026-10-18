@@ -15,8 +15,8 @@ const ITEMS = [
     a: "Cursor, Claude Code and Codex via the terminal install, or Claude.ai in the browser by uploading the skill ZIP. Same package either way.",
   },
   {
-    q: "What does it actually judge?",
-    a: "The portfolio as a hiring artefact: access, first scan, project choice, thinking, outcomes, voice and AI framing, About and NDA handling. It does not judge whether you should be hired.",
+    q: "What does it judge?",
+    a: "The portfolio as a hiring artefact: access and format; first scan; project choice and cards; thinking and decisions; outcomes and ownership; voice, AI use and visual quality; About, consistency and NDA handling. It does not judge whether you should be hired.",
   },
   {
     q: "Will it rewrite my case studies?",

@@ -2,28 +2,28 @@
 
 An AI skill that reviews product designer portfolios (and UX / UI portfolios) the way a busy hiring reviewer would. It is informed by [UXfolio’s State of UX Portfolios 2026](https://uxfol.io/state-of-ux-portfolios-2026) research.
 
-It also incorporates principles from Karl Koch’s [hiring-manager-bar](https://github.com/kemiljk/skills/tree/main/skills/hiring-manager-bar) skill ([karlkoch.me](https://karlkoch.me)) — treating the hiring manager as the user, tagging evidence carefully, and keeping fixes small and checkable. That skill is MIT-licensed; see `skills/pd-portfolio-review/evals/LICENSE-hiring-manager-bar`.
+It also incorporates principles from Karl Koch’s [hiring-manager-bar](https://github.com/kemiljk/skills/tree/main/skills/hiring-manager-bar) skill ([karlkoch.me](https://karlkoch.me)): treating the hiring manager as the user, tagging evidence carefully, and keeping fixes small and checkable. That skill is MIT-licensed; see `skills/pd-portfolio-review/evals/LICENSE-hiring-manager-bar`.
 
 Not affiliated with UXfolio. The scoring weights are this skill’s own.
 
-This repository is a **monorepo**: the installable skill lives under `skills/`, and the marketing landing site lives under `apps/web` (Next.js). Install the skill with `npx skills add`; run or deploy the website from the same repo. Planned host: [pd-portfolio-review.vercel.app](https://pd-portfolio-review.vercel.app).
+This repository is a **monorepo**: the installable skill lives under `skills/`, and the marketing landing site lives under `apps/web` (Next.js). Install the skill with `npx skills add`; run or deploy the website from the same repo. Live site: [pd-portfolio-review.vercel.app](https://pd-portfolio-review.vercel.app/).
 
 | Path | What it is |
 | --- | --- |
 | [`skills/pd-portfolio-review`](skills/pd-portfolio-review) | The installable agent skill, references, and evals |
-| [`apps/web`](apps/web) | Public landing page — install command, how it works, score, Claude.ai upload path, FAQ |
+| [`apps/web`](apps/web) | Public landing page: install command, how it works, score, Claude.ai upload path, FAQ |
 
 ## How it works
 
 1. You ask for a review and give a portfolio URL (optional: target role, password).
-2. The skill opens the site like a reviewer: home → work list → case studies → About → contact. It notes what is clear in the first ~30 seconds, then reads deeper.
-3. You get a scored report: strengths, problems, a red-flag check, open checks, questions only you can answer, and at most five fixes in priority order — each with a done-check.
+2. The skill opens the site like a reviewer: home, work list, case studies, About, contact. It notes what is clear in the first ~30 seconds, then reads deeper.
+3. You get a scored report: strengths, problems, a red-flag check, open checks, questions only you can answer, and at most five fixes in priority order, each with a done-check.
 
 Evidence on every finding:
 
-- **Rendered** — seen on the live page
-- **Source** — in HTML / metadata / text, not confirmed visually
-- **Unverified** — likely but unconfirmed (listed under Open checks; costs no points)
+- **Rendered**: seen on the live page
+- **Source**: in HTML / metadata / text, not confirmed visually
+- **Unverified**: likely but unconfirmed (listed under Open checks; costs no points)
 
 ## Score
 
@@ -39,13 +39,13 @@ Out of 100. Maths stay visible in the report.
 | Voice, AI use, visual quality | 10 |
 | About, consistency, NDA handling | 10 |
 
-Overrides: broken or locked link with no password → score **0** and stop. Each present red flag (Rendered or Source only) takes **3** points off the area total.
+Overrides: broken or locked link with no password scores **0** and stop. Each present red flag (Rendered or Source only) takes **3** points off the area total.
 
-Verdict bands: **80+** ready to send · **60–79** send after fixes · **40–59** needs work first · **under 40** rebuild.
+Verdict bands: **80+** ready to send · **60 to 79** send after fixes · **40 to 59** needs work first · **under 40** rebuild.
 
 ## Criteria
 
-Checks follow UXfolio 2026 chapters (first 30 seconds, format and access, finding the right project, inside a case study, NDA work, AI use), including the eight ranked red flags. Figures are cited as “UXfolio 2026, ch. X.Y” — not rounded or invented.
+Checks follow UXfolio 2026 chapters (first 30 seconds, format and access, finding the right project, inside a case study, NDA work, AI use), including the eight ranked red flags. Figures are cited as “UXfolio 2026, ch. X.Y”, not rounded or invented.
 
 Fairness rules built into the skill:
 
@@ -61,7 +61,7 @@ Principles shared with hiring-manager-bar include the reviewer path, evidence la
 
 [`skills/pd-portfolio-review/evals`](skills/pd-portfolio-review/evals) holds 27 invented review requests (plus local fixtures). Cases and fixtures come from Karl Koch’s hiring-manager-bar evals (MIT); expected outcomes are rewritten for this skill’s score, verdict bands, red flags, and evidence tags.
 
-Run them by hand with any agent that can load the skill — see [evals/README.md](skills/pd-portfolio-review/evals/README.md). Rerun after you change `SKILL.md` or the references. These check behaviour, not hiring outcomes.
+Run them by hand with any agent that can load the skill. See [evals/README.md](skills/pd-portfolio-review/evals/README.md). Rerun after you change `SKILL.md` or the references. These check behaviour, not hiring outcomes.
 
 ## Install
 

@@ -26,10 +26,7 @@ export function InstallCommand({ className = "" }: InstallCommandProps) {
     <div
       className={`flex w-full flex-col gap-3 sm:flex-row sm:items-stretch ${className}`}
     >
-      <code
-        data-lenis-prevent
-        className="mono flex min-w-0 flex-1 items-center overflow-x-auto whitespace-nowrap border border-border bg-surface px-4 py-3 text-muted-strong"
-      >
+      <code className="mono flex min-w-0 flex-1 items-center overflow-x-auto whitespace-nowrap border border-border bg-surface px-4 py-3 text-muted-strong">
         {INSTALL_COMMAND}
       </code>
       <button
@@ -38,10 +35,10 @@ export function InstallCommand({ className = "" }: InstallCommandProps) {
         className="grid shrink-0 place-items-center border border-accent bg-accent-soft px-5 py-3 text-small font-medium text-foreground transition-colors hover:bg-accent hover:text-background"
       >
         <span className="invisible col-start-1 row-start-1" aria-hidden>
-          Copy install
+          Copy command
         </span>
         <span className="col-start-1 row-start-1">
-          {copied ? "Copied" : "Copy install"}
+          {copied ? "Copied" : "Copy command"}
         </span>
       </button>
     </div>

@@ -8,11 +8,11 @@ const STEPS = [
   },
   {
     title: "It reads like a hiring reviewer",
-    body: "Home, work list, a couple of projects, About and contact. Roughly thirty seconds for the first scan, then a careful pass.",
+    body: "Home, work list, the first project and the one closest to your target role, About and contact. A first scan of about 30 seconds, then a careful pass.",
   },
   {
     title: "You get a scored report",
-    body: "Strengths, mistakes, red flags and a short list of prioritised fixes, each tied to something on the site.",
+    body: "Strengths, mistakes, red flags and up to five prioritised fixes, each tied to something on the site.",
   },
 ] as const;
 
