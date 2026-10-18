@@ -1,4 +1,9 @@
-type Project = { title: string; href: string; summary: string; contribution: string };
+type Project = {
+  title: string;
+  href: string;
+  summary: string;
+  contribution: string;
+};
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
@@ -8,7 +13,9 @@ export function ProjectCard({ project }: { project: Project }) {
         <p>{project.summary}</p>
         <p>My contribution: {project.contribution}</p>
       </div>
-      <div className="md:hidden" aria-hidden="true">{project.title}</div>
+      <div className="md:hidden" aria-hidden="true">
+        {project.title}
+      </div>
     </a>
   );
 }

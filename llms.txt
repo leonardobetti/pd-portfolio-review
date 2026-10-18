@@ -1,0 +1,33 @@
+# Product Designer Portfolio Review
+
+> An AI agent skill that reviews UX, UI and product design portfolios the way a busy hiring reviewer would. Paste a portfolio URL; get a scored report with evidence tags, red flags and at most five prioritised fixes. Informed by UXfolio’s State of UX Portfolios 2026. Scoring weights are this skill’s own. MIT licence.
+
+This repository is a Bun monorepo: installable skill under `skills/pd-portfolio-review/`, landing site under `apps/web/`.
+
+Install (Node.js 22+):
+
+```
+npx skills add leonardobetti/pd-portfolio-review@pd-portfolio-review
+```
+
+How to invoke after install: ask to review a portfolio and include the URL, or call `/pd-portfolio-review` (Claude Code / Cursor) or `$pd-portfolio-review` (Codex). Optional inputs: target role, site password.
+
+## Skill (agents)
+
+- [SKILL.md](skills/pd-portfolio-review/SKILL.md): Full skill instructions — fetch URL, reviewer path, fairness rules, scoring, report shape
+- [Report template](skills/pd-portfolio-review/references/report-template.md): Required report sections and tone
+- [UXfolio 2026 reference](skills/pd-portfolio-review/references/uxfolio-2026.md): Checks, red flags and cited figures by chapter
+- [Evals README](skills/pd-portfolio-review/evals/README.md): How to run the 27 invented review cases
+- [Eval cases](skills/pd-portfolio-review/evals/cases.json): Structured eval prompts and expected behaviours
+
+## Site
+
+- [Homepage](https://pd-portfolio-review.vercel.app/): Landing — install command, how it works, score, criteria, Claude.ai upload path, FAQ
+- [Site llms.txt](https://pd-portfolio-review.vercel.app/llms.txt): Same overview with absolute raw.githubusercontent.com links
+- [GitHub repository](https://github.com/leonardobetti/pd-portfolio-review): Source
+
+## Optional
+
+- [hiring-manager-bar (MIT)](https://github.com/kemiljk/skills/tree/main/skills/hiring-manager-bar): Upstream principles this skill incorporates (Karl Koch)
+- [UXfolio State of UX Portfolios 2026](https://uxfol.io/state-of-ux-portfolios-2026): Research source (not affiliated)
+- [LICENSE](LICENSE): MIT

@@ -1,0 +1,253 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0b;
+  --foreground: #f0efed;
+  --muted: #9b9a97;
+  --muted-strong: #c8c6c2;
+  --accent: #ffe14a;
+  --accent-soft: color-mix(in srgb, var(--accent) 18%, transparent);
+  --surface: #121214;
+  --border: color-mix(in srgb, var(--foreground) 12%, transparent);
+  --link-underline: rgba(200, 198, 194, 0.55);
+  --link-underline-hover: rgba(255, 225, 74, 0.85);
+  --ease-out-expo: cubic-bezier(0.33, 1, 0.68, 1);
+
+  --step--2: clamp(0.7813rem, 0.7736rem + 0.0341vw, 0.8rem);
+  --step--1: clamp(0.9375rem, 0.9119rem + 0.1136vw, 1rem);
+  --step-0: clamp(1.125rem, 1.0739rem + 0.2273vw, 1.25rem);
+  --step-1: clamp(1.35rem, 1.2631rem + 0.3864vw, 1.5625rem);
+  --step-2: clamp(1.62rem, 1.4837rem + 0.6057vw, 1.9531rem);
+  --step-3: clamp(1.944rem, 1.7405rem + 0.9044vw, 2.4414rem);
+  --step-4: clamp(2.3328rem, 2.0387rem + 1.3072vw, 3.0518rem);
+  --step-5: clamp(2.7994rem, 2.384rem + 1.8461vw, 3.8147rem);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-strong: var(--muted-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --font-sans: var(--font-inter);
+  --text-step--2: var(--step--2);
+  --text-step--1: var(--step--1);
+  --text-step-0: var(--step-0);
+  --text-step-1: var(--step-1);
+  --text-step-2: var(--step-2);
+  --text-step-3: var(--step-3);
+  --text-step-4: var(--step-4);
+  --text-step-5: var(--step-5);
+}
+
+html {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+body {
+  min-height: 100%;
+  background:
+    radial-gradient(
+      120% 80% at 12% -10%,
+      color-mix(in srgb, var(--accent) 14%, transparent),
+      transparent 55%
+    ),
+    radial-gradient(
+      90% 60% at 88% 8%,
+      color-mix(in srgb, #6f8f88 12%, transparent),
+      transparent 50%
+    ),
+    linear-gradient(180deg, #0c0c0e 0%, var(--background) 42%, #080809 100%);
+  color: var(--foreground);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-size: var(--step-0);
+  font-weight: 450;
+  letter-spacing: -0.01em;
+  word-spacing: -0.01em;
+  line-height: 1.6;
+  font-feature-settings:
+    "liga" 1,
+    "calt" 1,
+    "cv05" 1;
+  font-optical-sizing: auto;
+}
+
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+#__next,
+main {
+  position: relative;
+  z-index: 1;
+}
+
+body > *:not([data-toast]) {
+  position: relative;
+  z-index: 1;
+}
+
+[data-toast] {
+  position: fixed !important;
+  z-index: 100;
+}
+
+h1,
+.h1 {
+  font-size: var(--step-5);
+  font-weight: 550;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+
+h2,
+.h2 {
+  font-size: var(--step-4);
+  font-weight: 550;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+h3,
+.h3 {
+  font-size: var(--step-2);
+  font-weight: 520;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+p,
+li,
+td,
+th,
+dd,
+dt,
+summary,
+button,
+label,
+input {
+  font-size: var(--step-0);
+}
+
+small,
+.text-small {
+  font-size: var(--step--1);
+  line-height: 1.5;
+}
+
+.text-xs {
+  font-size: var(--step--2);
+  line-height: 1.45;
+}
+
+.text-lead {
+  font-size: var(--step-1);
+  line-height: 1.45;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-accent {
+  font-weight: 700;
+}
+
+.section {
+  padding-block: clamp(4.5rem, 8vw, 7.5rem);
+}
+
+.container {
+  width: min(100% - 2rem, 68rem);
+  margin-inline: auto;
+}
+
+.container-narrow {
+  width: min(100% - 2rem, 42rem);
+  margin-inline: auto;
+}
+
+/*
+  Soft link cue via background line — Tailwind preflight sets
+  `text-decoration: inherit`, which fights normal underlines.
+*/
+a {
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  background-image: linear-gradient(
+    var(--link-underline),
+    var(--link-underline)
+  );
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  transition:
+    color 160ms var(--ease-out-expo),
+    background-image 160ms var(--ease-out-expo);
+}
+
+a:hover {
+  color: var(--accent);
+  background-image: linear-gradient(
+    var(--link-underline-hover),
+    var(--link-underline-hover)
+  );
+}
+
+/* Titles, footer, and plain nav links stay clean. */
+h1 a,
+h2 a,
+h3 a,
+.h1 a,
+.h2 a,
+.h3 a,
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+.h1 a:hover,
+.h2 a:hover,
+.h3 a:hover,
+footer a,
+footer a:hover,
+a.link-plain,
+a.link-plain:hover {
+  background-image: none;
+}
+
+code,
+.mono {
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  font-size: var(--step--1);
+  letter-spacing: 0;
+  word-spacing: 0;
+  font-feature-settings: normal;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

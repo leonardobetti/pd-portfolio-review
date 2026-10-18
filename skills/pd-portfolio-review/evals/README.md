@@ -2,7 +2,7 @@
 
 27 invented review requests in [cases.json](cases.json), with what a good answer from this skill looks like. Three cases use the local sites in [fixtures](fixtures).
 
-The cases and fixtures come from Karl Koch's [hiring-manager-bar](https://github.com/kemiljk/skills/tree/main/skills/hiring-manager-bar) evals (MIT, see [LICENSE-hiring-manager-bar](LICENSE-hiring-manager-bar)). The expected outcomes are rewritten for this skill: score out of 100, verdict bands, locked site scores 0, the 8 UXfolio red flags, evidence tags, Open checks and Need from you.
+The cases and fixtures come from Karl Koch's [hiring-manager-bar](https://github.com/kemiljk/skills/tree/main/skills/hiring-manager-bar) skill ([karlkoch.me](https://karlkoch.me); MIT, see [LICENSE-hiring-manager-bar](LICENSE-hiring-manager-bar)). The expected outcomes are rewritten for this skill: score out of 100, verdict bands, locked site scores 0, the 8 UXfolio red flags, evidence tags, Open checks and Need from you.
 
 ## Run them by hand
 

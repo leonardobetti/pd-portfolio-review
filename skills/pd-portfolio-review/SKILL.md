@@ -1,11 +1,11 @@
 ---
-name: portfolio-review
+name: pd-portfolio-review
 description: >-
   Use when someone wants a UX, UI or product design portfolio reviewed from a
   link. Asks for the URL first, reads the site and its case studies, and returns
   a scored report based on UXfolio's State of UX Portfolios 2026.
 ---
-# Portfolio review
+# PD portfolio review
 
 Review a design portfolio as a busy hiring reviewer would. Then say what to fix. Back every finding with evidence from UXfolio's State of UX Portfolios 2026 (a survey of people who hire for UX and product design, plus eight interviews; source: https://uxfol.io/state-of-ux-portfolios-2026/report).
 

@@ -1,0 +1,30 @@
+# Product Designer Portfolio Review
+
+> An AI agent skill that reviews UX, UI and product design portfolios the way a busy hiring reviewer would. Paste a portfolio URL; get a scored report with evidence tags, red flags and at most five prioritised fixes. Informed by UXfolio’s State of UX Portfolios 2026. Scoring weights are this skill’s own. MIT licence.
+
+Install (Node.js 22+):
+
+```
+npx skills add leonardobetti/pd-portfolio-review@pd-portfolio-review
+```
+
+How to invoke after install: ask to review a portfolio and include the URL, or call `/pd-portfolio-review` (Claude Code / Cursor) or `$pd-portfolio-review` (Codex). Optional inputs: target role, site password.
+
+## Skill (agents)
+
+- [SKILL.md](https://raw.githubusercontent.com/leonardobetti/pd-portfolio-review/main/skills/pd-portfolio-review/SKILL.md): Full skill instructions — fetch URL, reviewer path, fairness rules, scoring, report shape
+- [Report template](https://raw.githubusercontent.com/leonardobetti/pd-portfolio-review/main/skills/pd-portfolio-review/references/report-template.md): Required report sections and tone
+- [UXfolio 2026 reference](https://raw.githubusercontent.com/leonardobetti/pd-portfolio-review/main/skills/pd-portfolio-review/references/uxfolio-2026.md): Checks, red flags and cited figures by chapter
+- [Evals README](https://raw.githubusercontent.com/leonardobetti/pd-portfolio-review/main/skills/pd-portfolio-review/evals/README.md): How to run the 27 invented review cases
+- [Eval cases](https://raw.githubusercontent.com/leonardobetti/pd-portfolio-review/main/skills/pd-portfolio-review/evals/cases.json): Structured eval prompts and expected behaviours
+
+## Site
+
+- [Homepage](https://pd-portfolio-review.vercel.app/): Landing — install command, how it works, score, criteria, Claude.ai upload path, FAQ
+- [GitHub repository](https://github.com/leonardobetti/pd-portfolio-review): Source monorepo (`skills/pd-portfolio-review`, `apps/web`)
+
+## Optional
+
+- [hiring-manager-bar (MIT)](https://github.com/kemiljk/skills/tree/main/skills/hiring-manager-bar): Upstream principles this skill incorporates (Karl Koch)
+- [UXfolio State of UX Portfolios 2026](https://uxfol.io/state-of-ux-portfolios-2026): Research source (not affiliated)
+- [LICENSE](https://raw.githubusercontent.com/leonardobetti/pd-portfolio-review/main/LICENSE): MIT
