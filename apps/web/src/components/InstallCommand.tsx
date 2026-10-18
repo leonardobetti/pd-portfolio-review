@@ -38,10 +38,10 @@ export function InstallCommand({ className = "" }: InstallCommandProps) {
         className="grid shrink-0 place-items-center border border-accent bg-accent-soft px-5 py-3 text-small font-medium text-foreground transition-colors hover:bg-accent hover:text-background"
       >
         <span className="invisible col-start-1 row-start-1" aria-hidden>
-          Copy install
+          Copy command
         </span>
         <span className="col-start-1 row-start-1">
-          {copied ? "Copied" : "Copy install"}
+          {copied ? "Copied" : "Copy command"}
         </span>
       </button>
     </div>

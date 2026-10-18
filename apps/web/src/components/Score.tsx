@@ -13,8 +13,8 @@ const AREAS = [
 
 const BANDS = [
   { range: "80+", label: "Ready to send" },
-  { range: "60–79", label: "Send after fixes" },
-  { range: "40–59", label: "Needs work first" },
+  { range: "60 to 79", label: "Send after fixes" },
+  { range: "40 to 59", label: "Needs work first" },
   { range: "Under 40", label: "Rebuild" },
 ] as const;
 
@@ -32,8 +32,8 @@ export function Score() {
           >
             UXfolio 2026
           </a>{" "}
-          rankings. A broken or locked link scores 0. Each red flag costs 3
-          points.
+          rankings. A broken link, or a locked one with no password, scores 0.
+          Each confirmed red flag costs 3 points.
         </p>
 
         <div className="mt-12 overflow-x-auto" data-lenis-prevent>

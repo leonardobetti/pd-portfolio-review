@@ -12,7 +12,7 @@ const TAGS = [
   },
   {
     name: "Unverified",
-    body: "Likely but unconfirmed. Listed under open checks. Never a red flag.",
+    body: "Likely but unconfirmed. Listed under Open checks. Never a red flag.",
   },
 ] as const;
 
@@ -34,9 +34,9 @@ export function Criteria() {
           >
             UXfolio&apos;s State of UX Portfolios 2026
           </a>
-          : access, finding the right project, case studies, NDA work and AI
-          use. This skill opens with a thirty-second first scan (the skill&apos;s
-          choice, not a finding from the report), then goes deeper. Figures are
+          chapters: First 30 seconds, Format and access, Finding the right
+          project, Inside a case study, NDA work and AI use. The review starts
+          with a first scan of about 30 seconds, then goes deeper. Figures are
           cited as given.
         </p>
         <p className="mt-4 max-w-[48ch] text-muted-strong">

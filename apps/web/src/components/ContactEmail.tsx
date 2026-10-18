@@ -42,12 +42,12 @@ export function ContactEmail({ className = "" }: ContactEmailProps) {
         onClick={copyEmail}
         className={`cursor-pointer bg-transparent p-0 text-small leading-[inherit] text-inherit transition-colors hover:text-accent ${className}`}
       >
-        Contact
+        Copy email
       </button>
       <Toast
         open={open}
         title="Email copied"
-        message={`${EMAIL_DISPLAY} has been copied to clipboard, please paste in your email now`}
+        message={`${EMAIL_DISPLAY}. Copied to your clipboard. Paste it into a new email.`}
       />
     </>
   );
