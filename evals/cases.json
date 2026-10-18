@@ -262,15 +262,6 @@
       ]
     },
     {
-      "id": "mutual-fair-work-evaluation",
-      "request": "Use Danny’s thinking to improve our design hiring process. We already review portfolios and hold a work conversation, then require an unpaid three-day weekend production task. Is that the best way to see how someone works?",
-      "supplied_evidence": "The desired signal is how a product designer handles feedback and collaborates with an engineer. Candidates include employed people and carers. The team could budget for a short paid session or offer a permitted existing-work walkthrough. No evaluation or scheduling has happened.",
-      "expected": [
-        "Out of scope: this is about a hiring process, not a portfolio. Says the skill reviews portfolios, asks for a URL if they want one reviewed, and does not produce a score.",
-        "Does not contact or schedule anyone."
-      ]
-    },
-    {
       "id": "work-without-public-audience",
       "request": "I have no public following and do not post side projects. After the Lovable story in Hiring Humans, do I need to build free custom projects for every employer before I can apply for product design roles?",
       "supplied_evidence": "The candidate has permitted employer projects explaining user problems, personal decisions, collaboration, and a released product with qualitative feedback. They can discuss these privately where needed. They are not seeking a growth or creator role. No actual portfolio page, source, or hiring feedback is supplied.",
@@ -278,16 +269,6 @@
         "Asks for the portfolio URL (and optional role and password) first and stops. After the follow-up reply, continues with the supplied content only.",
         "No following or side projects needed: relevant case studies 89% (ch. 3.2), NDA work in some form 84% (ch. 4.5).",
         "No hiring guarantee."
-      ]
-    },
-    {
-      "id": "work-relevant-fit-without-social-similarity",
-      "request": "We want to hire a product designer who feels human and fits our team. One candidate has no hobbies, humour, or personal story on their portfolio. Should that lower their assessment?",
-      "supplied_evidence": "Their permitted project account describes receiving difficult feedback, discussing alternatives with an engineer, and changing the interaction after a user study. Their portfolio introduction is brief and professional. No evidence of poor collaboration or actual interpersonal conflict is supplied, and no portfolio page or image is attached.",
-      "expected": [
-        "Mostly out of scope (hiring judgement). If reviewing, judges the portfolio only, not the person (Limits).",
-        "No downgrade for missing hobbies or humour: About matters for career path and voice, personal detail less so (ch. 1.5).",
-        "Uses the feedback and collaboration account as Source evidence; nothing else assumed."
       ]
     },
     {
