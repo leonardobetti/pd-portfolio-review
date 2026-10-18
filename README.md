@@ -34,7 +34,7 @@ npx skills add leonardobetti/portfolio-review -g -a cursor -a codex -y
 
 ### Manual
 
-Each tool looks for a folder named `portfolio-review` with `SKILL.md` inside.
+Each tool looks for a folder named `portfolio-review` with `SKILL.md` inside. Keep the `references` folder next to it: the skill reads it during a review.
 
 Claude Code
 
@@ -58,10 +58,11 @@ Clone (Claude Code example, change the path for your tool):
 git clone https://github.com/leonardobetti/portfolio-review ~/.claude/skills/portfolio-review
 ```
 
-Or just the file:
+Or just the skill files:
 
 ```sh
-mkdir -p ~/.claude/skills/portfolio-review && curl -fsSL https://raw.githubusercontent.com/leonardobetti/portfolio-review/main/SKILL.md -o ~/.claude/skills/portfolio-review/SKILL.md
+d=~/.claude/skills/portfolio-review; u=https://raw.githubusercontent.com/leonardobetti/portfolio-review/main
+mkdir -p $d/references && curl -fsSL $u/SKILL.md -o $d/SKILL.md && curl -fsSL $u/references/uxfolio-2026.md -o $d/references/uxfolio-2026.md && curl -fsSL $u/references/report-template.md -o $d/references/report-template.md
 ```
 
 Restart the tool or open a new chat so it picks up the skill.
@@ -73,6 +74,10 @@ Review this portfolio: https://example.com
 ```
 
 You can also call it by name: `/portfolio-review` in Claude Code and Cursor, or `$portfolio-review` in Codex.
+
+## Evals
+
+Test cases are in [evals](evals). See [evals/README.md](evals/README.md) for how to run them.
 
 ## Licence
 
