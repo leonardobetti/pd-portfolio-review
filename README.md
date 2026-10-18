@@ -1,12 +1,16 @@
 # portfolio-review
 
-An agent skill that reviews a UX, UI or product design portfolio from a link.
+An AI skill that reviews portfolios for product designers. It also covers UX and UI design portfolios. It is based on the [State of UX Portfolios 2026](https://uxfol.io/state-of-ux-portfolios-2026) research by UXfolio.
 
-- Asks for the URL first
-- Reads the site and its case studies like a hiring reviewer
-- Returns a scored report: strengths, mistakes, red flags, observations, fixes in priority order
+When you ask for a review, it:
 
-Based on UXfolio's [State of UX Portfolios 2026](https://uxfol.io/state-of-ux-portfolios-2026). Not affiliated with UXfolio. The scoring weights are this skill's own, not UXfolio's.
+- asks for the portfolio URL first
+- reads the site and its case studies as a hiring reviewer would
+- returns a scored report with strengths, mistakes, red flags, other notes and fixes in priority order
+
+Not affiliated with UXfolio. The scoring weights are this skill's own, not UXfolio's.
+
+Part of the skill was inspired by Karl Koch's [hiring-manager-bar](https://github.com/kemiljk/skills/tree/main/skills/hiring-manager-bar) skill (MIT licence).
 
 ## Install
 
@@ -68,7 +72,7 @@ Restart the tool or open a new chat so it picks up the skill.
 Review this portfolio: https://example.com
 ```
 
-Or call it directly: `/portfolio-review` in Claude Code and Cursor, `$portfolio-review` in Codex.
+You can also call it by name: `/portfolio-review` in Claude Code and Cursor, or `$portfolio-review` in Codex.
 
 ## Licence
 
