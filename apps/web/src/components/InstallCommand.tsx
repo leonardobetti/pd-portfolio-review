@@ -26,10 +26,7 @@ export function InstallCommand({ className = "" }: InstallCommandProps) {
     <div
       className={`flex w-full flex-col gap-3 sm:flex-row sm:items-stretch ${className}`}
     >
-      <code
-        data-lenis-prevent
-        className="mono flex min-w-0 flex-1 items-center overflow-x-auto whitespace-nowrap border border-border bg-surface px-4 py-3 text-muted-strong"
-      >
+      <code className="mono flex min-w-0 flex-1 items-center overflow-x-auto whitespace-nowrap border border-border bg-surface px-4 py-3 text-muted-strong">
         {INSTALL_COMMAND}
       </code>
       <button

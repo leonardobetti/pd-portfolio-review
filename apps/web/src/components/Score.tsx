@@ -36,7 +36,7 @@ export function Score() {
           Each confirmed red flag costs 3 points.
         </p>
 
-        <div className="mt-12 overflow-x-auto" data-lenis-prevent>
+        <div className="mt-12 overflow-x-auto">
           <table className="w-full min-w-[28rem] border-collapse text-left">
             <thead>
               <tr className="border-b border-border text-small text-muted">
