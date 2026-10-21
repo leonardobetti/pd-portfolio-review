@@ -33,7 +33,7 @@ export function Criteria() {
             rel="noopener noreferrer"
           >
             UXfolio&apos;s State of UX Portfolios 2026
-          </a>
+          </a>{" "}
           chapters: First 30 seconds, Format and access, Finding the right
           project, Inside a case study, NDA work and AI use. The review starts
           with a first scan of about 30 seconds, then goes deeper. Figures are

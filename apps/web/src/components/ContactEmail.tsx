@@ -42,7 +42,7 @@ export function ContactEmail({ className = "" }: ContactEmailProps) {
         onClick={copyEmail}
         className={`cursor-pointer bg-transparent p-0 text-small leading-[inherit] text-inherit transition-colors hover:text-accent ${className}`}
       >
-        Copy email
+        Email
       </button>
       <Toast
         open={open}
