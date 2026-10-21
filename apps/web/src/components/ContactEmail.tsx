@@ -40,9 +40,18 @@ export function ContactEmail({ className = "" }: ContactEmailProps) {
       <button
         type="button"
         onClick={copyEmail}
-        className={`cursor-pointer bg-transparent p-0 text-small leading-[inherit] text-inherit transition-colors hover:text-accent ${className}`}
+        aria-label="Email"
+        className={`inline-flex shrink-0 cursor-pointer items-center bg-transparent p-0 text-small leading-[inherit] text-inherit transition-colors hover:text-accent ${className}`}
       >
-        Email
+        <span className="hidden md:inline">Email</span>
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="size-4 fill-none stroke-current md:hidden"
+        >
+          <rect x="3" y="5" width="18" height="14" rx="2" strokeWidth="1.75" />
+          <path d="m4 7 8 6 8-6" strokeWidth="1.75" />
+        </svg>
       </button>
       <Toast
         open={open}

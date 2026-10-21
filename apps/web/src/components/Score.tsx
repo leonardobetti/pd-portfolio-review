@@ -36,19 +36,23 @@ export function Score() {
           Each confirmed red flag costs 3 points.
         </p>
 
-        <div className="mt-12 overflow-x-auto">
-          <table className="w-full min-w-[28rem] border-collapse text-left">
+        <div className="mt-12 w-full max-w-full">
+          <table className="w-full border-collapse text-left max-md:table-fixed">
             <thead>
               <tr className="border-b border-border text-small text-muted">
-                <th className="py-3 pr-4 font-medium">Area</th>
-                <th className="py-3 text-right font-medium">Points</th>
+                <th className="py-3 pr-3 font-medium md:pr-4">Area</th>
+                <th className="w-[4.75rem] py-3 text-right font-medium whitespace-nowrap md:w-auto">
+                  Points
+                </th>
               </tr>
             </thead>
             <tbody>
               {AREAS.map((row) => (
                 <tr key={row.area} className="border-b border-border/70">
-                  <td className="py-3.5 pr-4 text-muted-strong">{row.area}</td>
-                  <td className="py-3.5 text-right tabular-nums text-foreground">
+                  <td className="min-w-0 py-3.5 pr-3 break-words text-muted-strong md:pr-4">
+                    {row.area}
+                  </td>
+                  <td className="py-3.5 text-right tabular-nums whitespace-nowrap text-foreground">
                     {row.points}
                   </td>
                 </tr>
